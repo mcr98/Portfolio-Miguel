@@ -1,19 +1,16 @@
 body.dark {
     background-color: #0f0f0f;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px,
-            transparent 0);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
     background-size: 28px 28px;
-        color: #ffffff;
-        font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif; /*Estilo repetido en light*/
 }
 
 body.light {
-    min-height: 100vh;
     background-color: #f1eaea;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1px,
-            transparent 0);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 0);
     background-size: 28px 28px;
     color: #0a0a0a;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; /*Estilo repetido en dark*/
 }
 

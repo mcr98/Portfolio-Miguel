@@ -14,3 +14,48 @@ body.light {
     font-family: 'Roboto', sans-serif; /*Estilo repetido en dark*/
 }
 
+/* Contenedor*/
+main .avatar-wrapper {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin-inline: auto;
+    margin-top: 4rem;
+}
+
+/*circulo*/
+
+main .avatar-wrapper .circle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6c5ce7, #00cec9);
+    z-index: 1;
+    /*marco*/
+    border:5px solid rgb(47, 57, 148);
+    box-shadow: 
+        0 0 15px rgb(255, 0, 0),
+        0 0 30px rgb(0, 255, 0),
+        0 0 45px rgb(0, 0, 255);
+}
+
+/*Avatar*/
+main .avatar-wrapper .avatar {
+    position: absolute;
+    bottom: -23px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: auto;
+    z-index: 2;
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.25));
+    transition: transform 0.3s ease;
+}
+
+main .avatar-wrapper:hover .avatar {
+    transform: translateX(-50%) translateY(-20px);
+}

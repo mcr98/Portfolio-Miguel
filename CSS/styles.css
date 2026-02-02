@@ -1,5 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #09f;
+    height: 85px;
+    padding: 5 10%;
+}
+
+
+.navbar .link{
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 700;
+    color:#eceff1;
+    text-decoration: none;
+}
+
+.navbar .link:hover{
+    transform: scale(1.1);
+}
+
+h1{
+    display: flex;
+    justify-content: flex-start;
+}
+/*Botón cambiar tema*/
+
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    --background: #28096b;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px #fff000;
+    background: var(--background);
+    transition: .5s;
+}
+
+input:checked+.slider {
+    background-color: #3f7ddb;
+}
+
+input:checked+.slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #fff000;
+}
+
+/*----------------------*/
+
 body.dark {
-    background-color: #0f0f0f;
+    background-color: #131022;
     background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
     background-size: 28px 28px;
     color: #ffffff;
@@ -33,7 +120,6 @@ main .avatar-wrapper .circle {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #6c5ce7, #00cec9);
     z-index: 1;
     /*marco*/
     border:5px solid rgb(47, 57, 148);
@@ -57,5 +143,5 @@ main .avatar-wrapper .avatar {
 }
 
 main .avatar-wrapper:hover .avatar {
-    transform: translateX(-50%) translateY(-20px);
+   transform: scale(1.2) translateX(-40%);
 }

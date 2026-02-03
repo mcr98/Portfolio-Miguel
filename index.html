@@ -21,51 +21,68 @@
     <meta property="og:url" content="https://misitio.com" />
     <meta property="og:type" content="website" />
     -->
+    <!--Fuente Manrope-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
     <link href="CSS/styles.css" rel="stylesheet" type="text/css" />
     <title>Miguel Ángel Cadena | Front-end developer</title>
   </head>
   <body class="light">
     <header class="header">
-      <h1>Bienvenido a mi portfolio</h1>
-      <!--Botón de cambio de tema-->
-      <label class="switch">
-        <input type="checkbox" />
-        <span class="slider"></span>
-      </label>
-      <nav class="navbar">
-        <!--Navegación interna y externa-->
-        <a class="link" href="#experiencia">Experiencia</a>
-        <a class="link" href="#proyectos">Proyectos</a>
-        <a
-          class="link"
-          target="_blank"
-          rel="noreferrer"
-          href="https://github.com/mcr98"
-          >Github</a
-        >
-      </nav>
+      <div class="container">
+        <nav class="navbar">
+          <!--Navegación interna y externa-->
+          <a class="link" href="#experiencia">Experiencia</a>
+          <a class="link" href="#proyectos">Proyectos</a>
+          <a
+            class="link"
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/mcr98"
+            >Github</a
+          >
+        </nav>
+        <!--Botón de cambio de tema-->
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
+      </div>
     </header>
 
     <main>
-      <p>Tecnico superior en <strong>desarrollo de aplicaciones web</strong></p>
-      <figure class="avatar-wrapper">
-        <div class="circle"></div>
-        <img
-          class="avatar"
-          src="/img/face portfolio toon.png"
-          title="Avatar portfolio"
-          alt="Avatar portfolio"
-        />
-      </figure>
+      <section class="hero-grid">
+        <p class="title">
+          Hola, soy Miguel Ángel
+          <strong class="strong">desarrollador Web Front-end</strong>
+        </p>
+        <figure class="avatar-wrapper">
+          <div class="rgb-border">
+            <div class="rgb-inner">
+              <img
+                class="avatar"
+                src="/img/face portfolio toon.png"
+                title="Avatar portfolio"
+                alt="Avatar portfolio"
+              />
+            </div>
+          </div>
+        </figure>
+      </section>
 
       <h2 id="experiencia">Experiencia</h2>
 
       <ul>
         <li>Fundación MEDAC - 2025</li>
       </ul>
-      <section>
+      <section class="project-cards">
         <h2>Proyectos realizados</h2>
-        <article>
+        <article class="card">
           <header>
             <h3>página ERM</h3>
           </header>
@@ -96,9 +113,6 @@
           <li>Tailwind</li>
           <li>JavaScript</li>
           <li>React</li>
-          <li>Node.js</li>
-          <li>Nest</li>
-          <li>PostgreSQL</li>
         </ul>
       </aside>
       <section>

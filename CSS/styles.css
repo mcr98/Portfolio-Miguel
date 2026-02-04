@@ -269,6 +269,79 @@ body.light .project-cards {
     
         color: transparent;
 }
+
+/*Experience-----------------------*/
+
+.experience{
+    margin-top: 6rem;
+}
+.experience-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 800;
+}
+
+.experience-card {
+
+    background: var(--glass);
+
+    backdrop-filter: blur(12px);
+
+    border-radius: 1rem;
+
+    padding: 2rem;
+
+    border: 1px solid var(--border-light);
+
+    transition: .25s ease;
+}
+
+body.dark .experience-card {
+    border: 1px solid var(--border-dark);
+}
+
+.experience-card:hover {
+    transform: translateY(-6px);
+}
+
+.experience-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 1rem;
+}
+
+.experience-header h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.experience-date {
+
+    padding: .35rem .75rem;
+
+    border-radius: 999px;
+
+    background: rgba(55, 19, 236, .1);
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    font-size: .85rem;
+}
+
+.experience-description {
+
+    line-height: 1.7;
+
+    opacity: .9;
+
+    max-width: 65ch;
+    /* ancho ideal de lectura */
+}
 /*Botón cambiar tema*/
 
 /* The switch - the box around the slider */

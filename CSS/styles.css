@@ -262,12 +262,21 @@ body.light .project-cards {
     font-weight: 900;
 }
 
-.strong{
+.strong {
+    font-weight: 900;
+    line-height: 1.2;
     background: linear-gradient(90deg, var(--primary), #a78bfa);
-    
-        -webkit-background-clip: text;
-    
-        color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.description { /*Descripción debajo del título principal*/
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.6;
+    font-weight: 400;
+    max-width: 600px;
+    margin-top: 1rem;
 }
 
 /*Experience-----------------------*/

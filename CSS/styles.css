@@ -458,10 +458,26 @@ body.dark .tech-tags li {
 
 /*ABOUT ME----------------------------*/
 
+.about{
+    max-width: 640px;  
+    margin: 0;     
+    padding: 3rem;
+    border-radius: 18px;
+    background: var(--surface-subtle);
+
+}
+
+.about-content{
+    display:flex;
+    flex-direction:column;
+    gap:1.25rem;
+}
+
 .about-text{
     color: var(--text-color);
         text-wrap: pretty;
         text-align: left;
+        line-height:1.7;
 }
 
 .about-link{
@@ -481,8 +497,11 @@ body.dark .tech-tags li {
 }
 
 .about-title{
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
 }
+/*-------------------------------*/
+
 
 /*Botón cambiar tema*/
 

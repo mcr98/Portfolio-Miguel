@@ -387,7 +387,7 @@ body.dark .experience-date {
 .projects-grid {
     display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 380px));
-        gap: 2.5rem;
+        gap: 4rem;
         justify-content: center;
 }
 
@@ -464,11 +464,12 @@ body.dark .tech-tags li {
 /*ABOUT ME----------------------------*/
 
 .about{
-    max-width: 640px;  
+    max-width: 700px;  
     margin: 0;     
     padding: 3rem;
     border-radius: 18px;
     background: var(--surface-subtle);
+    margin-right: auto;
 
 }
 
@@ -561,6 +562,11 @@ body.dark .tech-tags li {
 
 .contact-button {
 
+            display: inline-block;
+            text-align: center;
+            padding: .9rem 1.4rem;
+                max-width: 100%;
+                    white-space: normal;
     padding: 1rem 1.6rem;
     border-radius: 999px;
 
@@ -648,6 +654,8 @@ body.dark .tech-tags li {
     }
 
 }
+/*-------------------------------------*/
+
 
 /*Botón cambiar tema*/
 
@@ -658,6 +666,7 @@ body.dark .tech-tags li {
     display: inline-block;
     width: 3.5em;
     height: 2em;
+    margin-right: 2rem;
 }
 
 /* Hide default HTML checkbox */
@@ -704,3 +713,7 @@ input:checked+.slider:before {
 }
 
 /*----------------------*/
+
+main>section+section {
+    margin-top: 7rem;
+}

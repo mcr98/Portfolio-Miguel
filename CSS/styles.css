@@ -48,7 +48,7 @@ body.light{
 body.dark {
     background: var(--bg-dark);
     color: var(--text-dark);
-    transition: var(--background) .3s color .3s;
+    transition: var(--background) .3s, color .3s;
     --card-bg: rgba(20, 20, 25, .6);
     --border-color: var(--border-dark);
 }
@@ -234,15 +234,14 @@ body.light .project-cards {
 }
 
 .title {
-
-    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-size: clamp(3rem, 4.5vw, 5rem);;
     line-height: 1.1;
-    font-weight: 900;
+    font-weight: 800;
 }
 
 .strong {
     font-weight: inherit;
-    line-height: 1.2;
+    line-height: inherit;
     background: linear-gradient(90deg, var(--primary), #a78bfa);
     background-clip: text;
     -webkit-background-clip: text;
@@ -250,7 +249,7 @@ body.light .project-cards {
 }
 
 .description {
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: clamp(1rem, 2vw, 1.50rem);
     line-height: 1.6;
     font-weight: 400;
     max-width: 600px;
@@ -637,4 +636,139 @@ input:checked+.slider {
 input:checked+.slider:before {
     transform: translateX(100%);
     box-shadow: inset 15px -4px 0 15px #fff000;
+}
+
+/* ===================== Responsive Navbar ===================== */
+@media (max-width: 900px) {
+  .navbar {
+    justify-content: flex-end;
+    position: relative;
+  }
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--card-bg);
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 200px;
+    padding: 1rem 0.5rem;
+    gap: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 10;
+  }
+  .navbar.open .navbar-links {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .navbar-links .link {
+    width: 100%;
+    text-align: right;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    margin: 0.2rem 0;
+    font-size: 1.1rem;
+  }
+  .navbar-links .link:hover {
+    background: var(--primary);
+    color: #fff;
+  }
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    gap: 6px;
+    margin-left: 1rem;
+    z-index: 20;
+  }
+  .hamburger-menu .line {
+    width: 28px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  /* Animación del icono hamburguesa al abrir */
+  .navbar.open .hamburger-menu .line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .navbar.open .hamburger-menu .line:nth-child(2) {
+    opacity: 0;
+  }
+  .navbar.open .hamburger-menu .line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  /* Ocultar links en horizontal y mostrar hamburguesa */
+  .navbar-links {
+    display: none;
+  }
+  .navbar.open .navbar-links {
+    display: flex;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+}
+
+@media (min-width: 901px) {
+  .navbar-links {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background: none;
+    box-shadow: none;
+    width: auto;
+    padding: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    gap: 2rem;
+  }
+  .hamburger-menu {
+    display: none !important;
+  }
+}
+
+/* Mejoras generales para móviles */
+@media (max-width: 600px) {
+  .header .container {
+    flex-direction: row;
+    padding: 0 0.5rem;
+  }
+  .navbar-links {
+    width: 100vw;
+    right: -16px;
+    border-radius: 0 0 1rem 1rem;
+  }
+  main {
+    padding: 2.5rem 0 1.5rem 0;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .avatar-wrapper {
+    width: 90vw;
+    height: 90vw;
+    max-width: 320px;
+    max-height: 320px;
+  }
+  .contact-container {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+  .projects-grid {
+    gap: 2rem;
+  }
 }

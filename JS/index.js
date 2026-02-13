@@ -9,3 +9,10 @@ toggle.addEventListener("change", () => {
     document.body.classList.add("light");
   }
 });
+
+// hamburguer button
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const navbar = document.querySelector(".navbar");
+hamburgerMenu.addEventListener("click", () => {
+  navbar.classList.toggle("open");
+});
